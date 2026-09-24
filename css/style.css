@@ -18,6 +18,13 @@
   --accent-subtle:   rgba(0,168,232,0.15);
   --accent-glow:     rgba(0,168,232,0.30);
 
+  /* ── Base Colors ─────────────────────────── */
+  --cyan:            #00A8E8;
+  --cyan-hover:      #25BAF3;
+  --navy:            #0B1E3D;
+  --navy-deep:       #061124;
+  --white:           #FFFFFF;
+
   /* ── Border ──────────────────────────────── */
   --border-subtle:   rgba(0,168,232,0.20);
   --border-card:     rgba(16,42,86,0.12);
@@ -34,14 +41,12 @@
   --font-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   /* Type Scale */
-  --text-5xl:   3.4rem;
-  --text-3xl:   2rem;
+  --text-5xl:   clamp(2.5rem, 5vw + 1rem, 3.8rem);
+  --text-3xl:   clamp(1.75rem, 3vw + 1rem, 2.5rem);
   --text-lg:    1.125rem;
   --text-base:  1rem;
   --text-sm:    0.875rem;
   --text-xs:    0.6875rem;
-  
-  --text-5xl-mobile: 1.75rem;
 
   /* ── Spacing ─────────────────────────────── */
   --space-1:    0.25rem;
@@ -286,12 +291,7 @@ section {
   background-color: var(--copper-line);
 }
 
-/* Mobile Typography overrides */
-@media (max-width: 639px) {
-  .heading-hero {
-    font-size: var(--text-5xl-mobile);
-  }
-}
+/* Mobile Typography overrides handled by clamp() */
 
 /* ── Buttons ───────────────────────────────── */
 .btn {
@@ -547,7 +547,7 @@ section {
   margin-top: var(--space-1);
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1023px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-8);
@@ -712,7 +712,7 @@ section {
   margin-bottom: var(--space-4);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .timeline::before {
     left: 16px;
   }
