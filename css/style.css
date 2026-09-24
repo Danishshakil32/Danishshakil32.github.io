@@ -429,8 +429,8 @@ section {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 5fr 7fr;
-  gap: var(--space-10);
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-8);
   align-items: center;
 }
 .hero-glow-top {
@@ -484,6 +484,7 @@ section {
   height: 90%;
   border-radius: var(--radius-xl);
   object-fit: cover;
+  object-position: top center;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
