@@ -491,14 +491,31 @@ section {
 
 .floating-badge {
   position: absolute;
-  background: var(--cyan);
-  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 0.6rem 1.25rem;
   border-radius: var(--radius-full);
-  color: var(--navy-deep);
-  font-weight: 700;
-  font-size: var(--text-sm);
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.floating-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--cyan);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--cyan);
 }
 .fb-1 { top: 10%; left: -10%; }
 .fb-2 { top: 20%; right: -10%; }
