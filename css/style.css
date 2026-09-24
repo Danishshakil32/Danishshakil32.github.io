@@ -421,8 +421,8 @@ section {
 /* ── Hero Section ──────────────────────────── */
 .hero {
   padding-top: calc(4.5rem + 2.5rem);
-  padding-bottom: var(--space-12);
-  min-height: 100vh;
+  padding-bottom: var(--space-8);
+  min-height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -491,12 +491,14 @@ section {
 
 .floating-badge {
   position: absolute;
-  background: rgba(11, 30, 61, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-subtle);
+  background: var(--cyan);
+  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-full);
-  color: var(--cyan);
+  color: var(--navy-deep);
+  font-weight: 700;
+  font-size: var(--text-sm);
 }
 .fb-1 { top: 10%; left: -10%; }
 .fb-2 { top: 20%; right: -10%; }
