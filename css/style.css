@@ -784,10 +784,12 @@ section {
   align-items: center;
   gap: var(--space-4);
 }
-.contact-method i {
+.contact-method i,
+.contact-method svg {
   color: var(--cyan);
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 }
 .contact-form {
   display: flex;
