@@ -105,7 +105,7 @@ window.updateModalView = function() {
         captionElement.innerText = window.currentModalCaption;
     }
     if (counterElement && window.currentModalImages.length > 1) {
-        counterElement.innerText = Image  + (window.currentModalIndex + 1) +  of  + window.currentModalImages.length;
+        counterElement.innerText = "Image " + (window.currentModalIndex + 1) + " of " + window.currentModalImages.length;
     } else if (counterElement) {
         counterElement.innerText = "";
     }
