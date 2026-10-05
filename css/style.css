@@ -935,3 +935,46 @@ textarea.form-input {
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.slider-btn {
+  background: rgba(0, 168, 232, 0.5);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  transition: 0.3s;
+}
+.slider-btn:hover {
+  background: rgba(0, 168, 232, 1);
+}
+.prev-btn {
+  left: 20px;
+}
+.next-btn {
+  right: 20px;
+}
+#modal-img {
+  max-height: 70vh;
+  margin-bottom: 15px;
+  max-width: 90vw;
+}
+#modal-caption {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: var(--font-body);
+}
