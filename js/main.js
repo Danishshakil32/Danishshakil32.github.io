@@ -63,3 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Image Modal functionality
+window.openModal = function(imageSrc, caption) {
+    const modal = document.getElementById('image-modal');
+    if(modal) {
+        document.getElementById('modal-img').src = imageSrc;
+        document.getElementById('modal-caption').innerText = caption;
+        modal.style.display = 'block';
+    }
+};
+
+window.closeModal = function() {
+    const modal = document.getElementById('image-modal');
+    if(modal) {
+        modal.style.display = 'none';
+    }
+};
+
+// Close modal when clicking outside of image
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('image-modal');
+    if(modal && modal.style.display === 'block') {
+        if(event.target === modal) {
+            closeModal();
+        }
+    }
+});

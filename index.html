@@ -125,107 +125,169 @@
                 <h2 class="heading-section reveal">Selected Projects</h2>
                 
                 <div class="projects-grid">
-                    <!-- BAT Project -->
+                    <!-- Project 1 -->
                     <article class="project-card interactive reveal">
-                        <div class="project-image-wrapper">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/stol_aircraft.png', 'Biomimetic STOL Aircraft Design')">
                             <picture>
-                                <img src="assets/images/projects/page1_img1.png" alt="BAT Process flow diagram" class="project-image" loading="lazy">
+                                <img src="data/projects/stol_aircraft.png" alt="Biomimetic STOL Aircraft Design" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page1_img1.png'">
                             </picture>
-                        </div>
-                        <div class="project-meta">
-                            <span class="badge badge-status professional">Professional</span>
-                            <span class="badge badge-date">Jun-Jul 2026</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-pill badge">SolidWorks</span>
-                            <span class="tech-pill badge">Technical Drawing</span>
-                        </div>
-                        <h3 class="project-title heading-card">Automated Tobacco Reclaimer System</h3>
-                        <p class="project-desc body-small">Designed and mapped an automated tobacco reclaimer system as part of a manufacturing internship, aimed at optimizing primary production operations.</p>
-                        <!-- For simplicity in static design without full modal implementation right now, we can link to the image or leave as button -->
-                        <a href="assets/images/projects/page1_img2.png" target="_blank" class="btn btn-primary" aria-label="View Details for BAT Project">View Details <i data-lucide="external-link" style="width: 16px; height: 16px;"></i></a>
-                    </article>
-
-                    <!-- Bigfoot Trailers Project -->
-                    <article class="project-card interactive reveal" style="animation-delay: 0.1s;">
-                        <div class="project-image-wrapper">
-                            <picture>
-                                <img src="assets/images/projects/page2_img1.jpeg" alt="Yeti 24 exterior CAD render" class="project-image" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="project-meta">
-                            <span class="badge badge-status professional">Professional</span>
-                            <span class="badge badge-date">Aug 2025</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-pill badge">SolidWorks</span>
-                            <span class="tech-pill badge">CAD Modeling</span>
-                        </div>
-                        <h3 class="project-title heading-card">Yeti 24 Product Enclosure Design</h3>
-                        <p class="project-desc body-small">Delivered the complete 3D CAD model for a Yeti-branded product enclosure for a US-based trailer manufacturer, working remotely to client specifications.</p>
-                        <a href="assets/images/projects/page2_img2.jpeg" target="_blank" class="btn btn-primary" aria-label="View Details for Bigfoot Trailers Project">View Details <i data-lucide="external-link" style="width: 16px; height: 16px;"></i></a>
-                    </article>
-
-                    <!-- RoboCup Robot -->
-                    <article class="project-card interactive reveal" style="animation-delay: 0.2s;">
-                        <div class="project-image-wrapper">
-                            <picture>
-                                <img src="assets/images/projects/page3_img1.png" alt="RoboCup robot CAD assembly" class="project-image" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="project-meta">
-                            <span class="badge badge-status competition">Competition</span>
-                            <span class="badge badge-date">Dec 2025 – May 2026</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-pill badge">SolidWorks</span>
-                            <span class="tech-pill badge">3D Printing</span>
-                            <span class="tech-pill badge">Prototyping</span>
-                        </div>
-                        <h3 class="project-title heading-card">RoboCup SSL Robot</h3>
-                        <p class="project-desc body-small">Developed 3D CAD assemblies for an autonomous soccer robot equipped with Maxon motors. Designed specialized mechanical dribbler and kicker mechanism.</p>
-                        <a href="assets/images/projects/page3_img2.jpeg" target="_blank" class="btn btn-primary" aria-label="View Details for RoboCup Robot">View Details <i data-lucide="external-link" style="width: 16px; height: 16px;"></i></a>
-                    </article>
-
-                    <!-- Heavyweight Combat Robot -->
-                    <article class="project-card interactive reveal">
-                        <div class="project-image-wrapper">
-                            <picture>
-                                <img src="assets/images/projects/page4_img1.png" alt="Combat robot structural layout" class="project-image" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="project-meta">
-                            <span class="badge badge-status competition">Competition</span>
-                            <span class="badge badge-date">Jul 2024 – May 2025</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-pill badge">SolidWorks</span>
-                            <span class="tech-pill badge">FEA</span>
-                            <span class="tech-pill badge">Machining</span>
-                        </div>
-                        <h3 class="project-title heading-card">Heavyweight Combat Robot</h3>
-                        <p class="project-desc body-small">Executed structural calculations, material selection, and force analysis for a 60 kg Vertical Spinner to ensure design integrity under heavy impact.</p>
-                        <a href="assets/images/projects/page4_img2.png" target="_blank" class="btn btn-primary" aria-label="View Details for Combat Robot">View Details <i data-lucide="external-link" style="width: 16px; height: 16px;"></i></a>
-                    </article>
-
-                    <!-- Aerospace Bracket -->
-                    <article class="project-card interactive reveal" style="animation-delay: 0.1s;">
-                        <div class="project-image-wrapper" style="display: flex; align-items: center; justify-content: center; background: var(--navy);">
-                            <i data-lucide="rocket" style="width: 64px; height: 64px; color: var(--cyan); opacity: 0.5;"></i>
                         </div>
                         <div class="project-meta">
                             <span class="badge badge-status academic">Academic</span>
-                            <span class="badge badge-date">Dec 2024 – May 2025</span>
+                            <span class="badge badge-date">Apr 2026 â€“ May 2026</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">SolidWorks</span>
+                            <span class="tech-pill badge">CFD</span>
+                            <span class="tech-pill badge">Python</span>
+                        </div>
+                        <h3 class="project-title heading-card">Biomimetic STOL Aircraft Design</h3>
+                        <p class="project-desc body-small">Engineered a biomimetic aerodynamic mechanism inspired by the falcon's alula. Validated through CFD simulations, demonstrating delayed flow separation and improved lift coefficients.</p>
+                        <button onclick="openModal('data/projects/stol_aircraft.png', 'Biomimetic STOL Aircraft Design')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card interactive reveal" style="animation-delay: 0.1s;">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/helical_gearbox.png', 'Two Stage Helical Gearbox')">
+                            <picture>
+                                <img src="data/projects/helical_gearbox.png" alt="Two Stage Helical Gearbox" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page2_img1.jpeg'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Jan 2026 â€“ Apr 2026</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">Machine Design</span>
+                            <span class="tech-pill badge">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title heading-card">Two Stage Helical Gearbox with ML</h3>
+                        <p class="project-desc body-small">Engineered a complete transmission system and developed a Random Forest ML fault diagnosis model to classify and predict early-stage bearing faults.</p>
+                        <button onclick="openModal('data/projects/helical_gearbox.png', 'Two Stage Helical Gearbox')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card interactive reveal" style="animation-delay: 0.2s;">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/inductor_design.png', 'Pot Core Inductor Design')">
+                            <picture>
+                                <img src="data/projects/inductor_design.png" alt="Pot Core Inductor Design" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page3_img1.png'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Jan 2026 â€“ Mar 2026</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">Energy Mgmt</span>
+                            <span class="tech-pill badge">Heat Transfer</span>
+                        </div>
+                        <h3 class="project-title heading-card">Pot Core Inductor Design</h3>
+                        <p class="project-desc body-small">Optimized pot core inductors for high-efficiency. Evaluated core and copper losses to maximize Q-factor and managed thermal dissipation.</p>
+                        <button onclick="openModal('data/projects/inductor_design.png', 'Pot Core Inductor Design')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card interactive reveal">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/fluid_diffusion.png', 'Fluid Diffusion and Mass Transfer')">
+                            <picture>
+                                <img src="data/projects/fluid_diffusion.png" alt="Fluid Diffusion Analysis" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page4_img1.png'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Dec 2025</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">Fluid Mechanics</span>
+                            <span class="tech-pill badge">Thermodynamics</span>
+                        </div>
+                        <h3 class="project-title heading-card">Fluid Diffusion Analysis</h3>
+                        <p class="project-desc body-small">Investigated the physical principles of molecular diffusion. Conducted experiments to observe the effects of thermal gradients and concentration variations.</p>
+                        <button onclick="openModal('data/projects/fluid_diffusion.png', 'Fluid Diffusion and Mass Transfer')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card interactive reveal" style="animation-delay: 0.1s;">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/aerospace_bracket.png', 'Topology Optimization of an Aerospace Bracket')">
+                            <picture>
+                                <img src="data/projects/aerospace_bracket.png" alt="Aerospace Bracket" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page3_img3.jpeg'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Dec 2025</span>
                         </div>
                         <div class="project-tech">
                             <span class="tech-pill badge">ANSYS</span>
-                            <span class="tech-pill badge">Topology Opt.</span>
+                            <span class="tech-pill badge">FEA</span>
+                            <span class="tech-pill badge">CAD</span>
                         </div>
                         <h3 class="project-title heading-card">Aerospace Bracket Opt.</h3>
-                        <p class="project-desc body-small">Executed a topology optimization study using ANSYS to lightweight a standard Ti-6Al-4V aerospace bracket while preserving its load-bearing integrity. (32% mass reduction, FoS > 1.5)</p>
-                        <a href="#" class="btn btn-primary" aria-label="View Details for Aerospace Bracket">View Details <i data-lucide="external-link" style="width: 16px; height: 16px;"></i></a>
+                        <p class="project-desc body-small">Executed a topology optimization study to maximize stiffness-to-weight ratio. Redesigned into a highly efficient 3D CAD model achieving significant mass reduction.</p>
+                        <button onclick="openModal('data/projects/aerospace_bracket.png', 'Topology Optimization of an Aerospace Bracket')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card interactive reveal" style="animation-delay: 0.2s;">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/wire_robot.png', 'Wire Travelling Robot')">
+                            <picture>
+                                <img src="data/projects/wire_robot.png" alt="Wire Travelling Robot" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page1_img2.png'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Dec 2025</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">Theory of Machines</span>
+                            <span class="tech-pill badge">Kinematics</span>
+                        </div>
+                        <h3 class="project-title heading-card">Wire Travelling Robot</h3>
+                        <p class="project-desc body-small">Engineered a specialized wire-traveling robot for dynamic stability. Designed a traction-based drive mechanism to prevent pendulum oscillations.</p>
+                        <button onclick="openModal('data/projects/wire_robot.png', 'Wire Travelling Robot')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="project-card interactive reveal">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/vbelt_drive.png', 'V-Belt Drive System')">
+                            <picture>
+                                <img src="data/projects/vbelt_drive.png" alt="V-Belt Drive System" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page2_img2.jpeg'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Dec 2024 â€“ Jan 2025</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">SolidWorks</span>
+                            <span class="tech-pill badge">Product Design</span>
+                        </div>
+                        <h3 class="project-title heading-card">V-Belt Drive System</h3>
+                        <p class="project-desc body-small">Engineered a complete mechanical V-belt drive transmission system. Executed analytical calculations and translated into a precise 3D CAD assembly.</p>
+                        <button onclick="openModal('data/projects/vbelt_drive.png', 'V-Belt Drive System')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
+                    </article>
+
+                    <!-- Project 8 -->
+                    <article class="project-card interactive reveal" style="animation-delay: 0.1s;">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openModal('data/projects/jet_turbine.png', 'Thermodynamic Analysis of Jet Engine')">
+                            <picture>
+                                <img src="data/projects/jet_turbine.png" alt="Jet Gas Turbine Engine" class="project-image" loading="lazy" onerror="this.src='assets/images/projects/page4_img2.png'">
+                            </picture>
+                        </div>
+                        <div class="project-meta">
+                            <span class="badge badge-status academic">Academic</span>
+                            <span class="badge badge-date">Dec 2024 â€“ Jan 2025</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">Thermodynamics</span>
+                            <span class="tech-pill badge">EES</span>
+                        </div>
+                        <h3 class="project-title heading-card">Jet Gas Turbine Engine</h3>
+                        <p class="project-desc body-small">Conducted a comprehensive thermodynamic analysis of a military jet engine using Engineering Equation Solver (EES). Evaluated key operational metrics.</p>
+                        <button onclick="openModal('data/projects/jet_turbine.png', 'Thermodynamic Analysis of Jet Engine')" class="btn btn-primary" aria-label="View Details" style="margin-top: 10px; width: 100%;">View Image <i data-lucide="image" style="width: 16px; height: 16px;"></i></button>
                     </article>
                 </div>
+"
             </div>
         </section>
 
@@ -359,7 +421,15 @@
             </div>
         </section>
 
-    </main>
+        <!-- Project Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div style="display:flex; justify-content:center; align-items:center; height:100%; flex-direction:column; padding: 20px;">
+            <img id="modal-img" class="modal-content" src="" alt="Project Image" style="max-height: 70vh; margin-bottom: 20px;">
+            <div id="modal-caption" style="color: white; font-size: 1.5rem; text-align: center;"></div>
+        </div>
+    </div>
+</main>
 
     <!-- Footer -->
     <footer class="footer">
