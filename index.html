@@ -29,8 +29,8 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=9">
-    <link rel="stylesheet" href="css/animations.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/animations.css?v=10">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -62,8 +62,14 @@
             <nav id="main-nav" class="main-nav">
                 <ul class="nav-links">
                     <li><a href="#hero" class="nav-link body-emphasis">Home</a></li>
-                    <li><a href="#ongoing" class="nav-link body-emphasis">Ongoing</a></li>
-                    <li><a href="#projects" class="nav-link body-emphasis">Projects</a></li>
+                    <li class="nav-dropdown">
+                        <button type="button" class="nav-link body-emphasis nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-projects-menu">Projects <i data-lucide="chevron-down" class="nav-chev"></i></button>
+                        <ul id="nav-projects-menu" class="nav-submenu">
+                            <li><a href="#ongoing" class="nav-link body-emphasis">Ongoing</a></li>
+                            <li><a href="#industrial" class="nav-link body-emphasis">Industrial</a></li>
+                            <li><a href="#academic" class="nav-link body-emphasis">Academic</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#experience" class="nav-link body-emphasis">Experience</a></li>
                     <li><a href="#contact" class="nav-link body-emphasis">Contact</a></li>
                 </ul>
@@ -232,7 +238,7 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="heading-section reveal">Industrial Experience</h2>
+                <h2 id="industrial" class="heading-section reveal">Industrial Experience</h2>
                 <div class="projects-grid" style="margin-bottom: 6rem;">
                     <article class="project-card interactive reveal">
                         <div class="project-image-wrapper cursor-pointer"
@@ -324,7 +330,7 @@
                     </article>
                 </div>
 
-                <h2 class="heading-section reveal">Academic Projects</h2>
+                <h2 id="academic" class="heading-section reveal">Academic Projects</h2>
                 <div class="projects-grid">
                     <article class="project-card interactive reveal">
                         <div class="project-image-wrapper cursor-pointer"
@@ -729,7 +735,7 @@
     <!-- Scripts -->
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="js/main.js?v=9" defer></script>
+    <script src="js/main.js?v=10" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/form.js" defer></script>
 </body>

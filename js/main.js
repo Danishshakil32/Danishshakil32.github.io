@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close mobile menu on link click
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('a.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (mainNav.classList.contains('open')) {
@@ -166,3 +166,21 @@ window.toggleFypMore = function () {
     btn.setAttribute('aria-expanded', String(open));
     btn.querySelector('span').textContent = open ? 'Less Details' : 'More Details';
 };
+
+// Projects dropdown in the header nav
+(function () {
+    const dd = document.querySelector('.nav-dropdown');
+    if (!dd) return;
+    const btn = dd.querySelector('.nav-drop-btn');
+    const setOpen = (open) => {
+        dd.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(!dd.classList.contains('open'));
+    });
+    dd.querySelectorAll('.nav-submenu a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('click', (e) => { if (!dd.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setOpen(false); } });
+})();
