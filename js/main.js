@@ -155,3 +155,14 @@ window.openFypGallery = function (startIndex) {
     window.currentModalIndex = startIndex || 0;
     window.updateModalView();
 };
+
+// FYP: show/hide the More Details tiles
+window.toggleFypMore = function () {
+    const panel = document.getElementById('fyp-more');
+    const btn = document.getElementById('fyp-more-btn');
+    if (!panel || !btn) return;
+    const open = panel.hidden;
+    panel.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('span').textContent = open ? 'Less Details' : 'More Details';
+};

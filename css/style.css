@@ -1245,3 +1245,12 @@ textarea.form-input {
 .fyp-link { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-weight: 700; text-decoration: none; }
 .fyp-link:hover { text-decoration: underline; }
 .fyp-people { grid-template-columns: minmax(0, 1fr) !important; }
+.fyp-tiles[hidden] { display: none; }
+.fyp-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.fyp-btn-outline { color: var(--navy) !important; border-color: var(--navy) !important; }
+.fyp-btn-outline:hover { color: var(--accent) !important; border-color: var(--accent) !important; }
+.fyp-chev { transition: transform var(--transition-base); }
+#fyp-more-btn[aria-expanded="true"] .fyp-chev { transform: rotate(180deg); }
+#fyp-more:not([hidden]) { animation: fyp-reveal 0.35s ease both; }
+@keyframes fyp-reveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (max-width: 639px) { .fyp-actions { flex-direction: column; } }
