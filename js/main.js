@@ -137,8 +137,8 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-// FYP: gallery (shared image modal, per-image captions) and details dialog
-(function () {
+// FYP gallery: opens the shared image modal at a given image, with per-image captions
+window.openFypGallery = function (startIndex) {
     const dir = 'data/Projects/fyp-refrigerator-insulation/';
     const items = [
         ['project-approach.png', 'Two-stage approach: A4 foam samples first, then PEL refrigerator cabinets'],
@@ -151,36 +151,7 @@ document.addEventListener('click', function(event) {
         ['cabinet-scanner-top.png', 'U-shaped cabinet scanner, top view with EMAT probes'],
         ['cabinet-scanner-iso.png', 'U-shaped cabinet scanner around a refrigerator cabinet']
     ];
-    let reopenDetails = false;
-
-    window.openFypDetails = function () {
-        const dlg = document.getElementById('fyp-details');
-        if (dlg && !dlg.open) { dlg.showModal(); document.body.style.overflow = 'hidden'; }
-    };
-    window.closeFypDetails = function () {
-        const dlg = document.getElementById('fyp-details');
-        if (dlg && dlg.open) dlg.close();
-    };
-
-    window.openFypGallery = function (startIndex) {
-        const dlg = document.getElementById('fyp-details');
-        reopenDetails = !!(dlg && dlg.open);
-        if (reopenDetails) dlg.close();
-        window.openModal(items.map(i => dir + i[0]), items.map(i => i[1]));
-        window.currentModalIndex = startIndex || 0;
-        window.updateModalView();
-    };
-
-    const baseClose = window.closeModal;
-    window.closeModal = function () {
-        baseClose();
-        if (reopenDetails) { reopenDetails = false; window.openFypDetails(); }
-    };
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const dlg = document.getElementById('fyp-details');
-        if (!dlg) return;
-        dlg.addEventListener('close', function () { if (!reopenDetails) document.body.style.overflow = ''; });
-        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-    });
-})();
+    window.openModal(items.map(i => dir + i[0]), items.map(i => i[1]));
+    window.currentModalIndex = startIndex || 0;
+    window.updateModalView();
+};
