@@ -62,6 +62,7 @@
             <nav id="main-nav" class="main-nav">
                 <ul class="nav-links">
                     <li><a href="#hero" class="nav-link body-emphasis">Home</a></li>
+                    <li><a href="#ongoing" class="nav-link body-emphasis">Ongoing</a></li>
                     <li><a href="#projects" class="nav-link body-emphasis">Projects</a></li>
                     <li><a href="#experience" class="nav-link body-emphasis">Experience</a></li>
                     <li><a href="#contact" class="nav-link body-emphasis">Contact</a></li>
@@ -124,6 +125,81 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+
+
+        <!-- Ongoing Projects Section -->
+        <section id="ongoing" class="projects ongoing">
+            <div class="container">
+                <div class="section-eyebrow reveal">
+                    <span class="label">In Progress</span>
+                </div>
+                <h2 class="heading-section reveal">Ongoing Projects</h2>
+
+                <article class="project-card ongoing-card reveal">
+                    <div class="project-meta ongoing-meta">
+                        <span class="badge badge-status ongoing-status"><span class="pulse-dot" aria-hidden="true"></span>Ongoing</span>
+                        <span class="badge badge-date">Final Year Project · GIK Institute × PEL</span>
+                    </div>
+
+                    <h3 class="project-title heading-card ongoing-title">Design and Development of AI-Powered Anomaly Detection of Refrigerator Insulation</h3>
+
+                    <div class="project-tech">
+                        <span class="tech-pill badge">EMAT Ultrasonics</span>
+                        <span class="tech-pill badge">Lamb Waves</span>
+                        <span class="tech-pill badge">Data Acquisition</span>
+                        <span class="tech-pill badge">Scanner Design</span>
+                        <span class="tech-pill badge">SolidWorks</span>
+                        <span class="tech-pill badge">NDT</span>
+                    </div>
+
+                    <div class="ongoing-grid">
+                        <div class="ongoing-col">
+                            <h4 class="ongoing-subhead">Overview</h4>
+                            <p class="project-desc body-small">A non-destructive inspection system that finds defects in the polyurethane (PU) foam insulation of refrigerator cabinets. The project runs at the Faculty of Mechanical Engineering, GIK Institute, with industrial collaboration from Pak Elektron Limited (PEL). The scanner sends ultrasonic waves through the cabinet walls, and AI will flag anomalies such as foam debonding automatically.</p>
+
+                            <h4 class="ongoing-subhead">Approach</h4>
+                            <p class="project-desc body-small">Electromagnetic acoustic transducer (EMAT) probes excite guided ultrasonic waves in the cabinet&rsquo;s metal skin. The method builds on Yang et al. (2023), where debonding beneath the plate shows up as a loss of amplitude in the A0 Lamb wave mode.</p>
+                            <p class="project-desc body-small"><strong>Acquisition chain:</strong> EMAT probes on the metal plate &rarr; Sonemat HPP2000 pulser &rarr; power amplifier &rarr; DAQ card &rarr; oscilloscope.</p>
+
+                            <h4 class="ongoing-subhead">Scanner Designs</h4>
+                            <ul class="ongoing-list body-small">
+                                <li><strong>A4 sample scanner:</strong> a 2-DOF frame with one motorized axis and one manual axis, for scanning flat test samples.</li>
+                                <li><strong>Cabinet scanner:</strong> a U-shaped unit. On the PEL line it stays fixed below the cabinet as the cabinet moves from the curing station to the trolley. In the university lab it slides around a stationary cabinet.</li>
+                            </ul>
+                        </div>
+
+                        <div class="ongoing-col">
+                            <h4 class="ongoing-subhead">Progress</h4>
+                            <ol class="ongoing-steps body-small">
+                                <li class="step done">
+                                    <span class="step-icon"><i data-lucide="check" style="width: 14px; height: 14px;"></i></span>
+                                    <div><strong>Data-acquisition setup</strong><span>Built</span></div>
+                                </li>
+                                <li class="step active">
+                                    <span class="step-icon"><i data-lucide="pen-tool" style="width: 14px; height: 14px;"></i></span>
+                                    <div><strong>Sample &amp; cabinet scanners</strong><span>CAD designed &middot; fabrication pending funding</span></div>
+                                </li>
+                                <li class="step">
+                                    <span class="step-icon"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i></span>
+                                    <div><strong>ML / DL anomaly detection</strong><span>Upcoming</span></div>
+                                </li>
+                            </ol>
+
+                            <h4 class="ongoing-subhead">Team &middot; Group 11</h4>
+                            <p class="project-desc body-small">Aman Syed, Danish Shakil, Muhammad Saad</p>
+
+                            <h4 class="ongoing-subhead">Supervision</h4>
+                            <ul class="ongoing-list ongoing-plain body-small">
+                                <li><strong>Advisor:</strong> Dr. Arsalan Arif</li>
+                                <li><strong>Co-advisor:</strong> Dr. Shahid Alam</li>
+                                <li><strong>Industrial co-advisor:</strong> Mr. Mansoor Zaman, Head of QC/QA, PEL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
