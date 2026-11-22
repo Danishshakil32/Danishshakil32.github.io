@@ -595,7 +595,8 @@ section {
 /* ── Projects Section ──────────────────────── */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1100px;
   gap: var(--space-8);
   margin-top: var(--space-10);
 }
@@ -1254,3 +1255,4 @@ textarea.form-input {
 #fyp-more:not([hidden]) { animation: fyp-reveal 0.35s ease both; }
 @keyframes fyp-reveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 @media (max-width: 639px) { .fyp-actions { flex-direction: column; } }
+.fyp-card { max-width: 1100px; }
