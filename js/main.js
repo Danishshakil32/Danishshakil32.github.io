@@ -102,7 +102,7 @@ window.updateModalView = function() {
         imgElement.src = window.currentModalImages[window.currentModalIndex];
     }
     if (captionElement) {
-        captionElement.innerText = window.currentModalCaption;
+        captionElement.innerText = Array.isArray(window.currentModalCaption) ? (window.currentModalCaption[window.currentModalIndex] || "") : window.currentModalCaption;
     }
     if (counterElement && window.currentModalImages.length > 1) {
         counterElement.innerText = "Image " + (window.currentModalIndex + 1) + " of " + window.currentModalImages.length;
@@ -137,3 +137,17 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+// FYP gallery: opens the shared modal at a given image with per-image captions
+window.openFypGallery = function(startIndex) {
+    const dir = 'data/Projects/fyp-refrigerator-insulation/';
+    const items = [
+        ['project-approach.png', 'Two-stage approach: A4 foam samples, then PEL refrigerator cabinets'],
+        ['emat-daq-chain.png', 'EMAT data-acquisition chain'],
+        ['a4-scanner-cad.png', 'A4 sample scanner, CAD model (one motorized axis + one manual axis)'],
+        ['cabinet-scanner-top.png', 'U-shaped cabinet scanner, top view with EMAT probes'],
+        ['cabinet-scanner-iso.png', 'U-shaped cabinet scanner around a refrigerator cabinet']
+    ];
+    window.openModal(items.map(i => dir + i[0]), items.map(i => i[1]));
+    window.currentModalIndex = startIndex || 0;
+    window.updateModalView();
+};

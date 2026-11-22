@@ -29,8 +29,8 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/animations.css?v=2">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -138,66 +138,115 @@
                 </div>
                 <h2 class="heading-section reveal">Ongoing Projects</h2>
 
-                <article class="project-card ongoing-card reveal">
-                    <div class="project-meta ongoing-meta">
-                        <span class="badge badge-status ongoing-status"><span class="pulse-dot" aria-hidden="true"></span>Ongoing</span>
-                        <span class="badge badge-date">Final Year Project · GIK Institute × PEL</span>
+                <article class="project-card fyp-card reveal">
+                    <!-- Header -->
+                    <div class="fyp-header">
+                        <div class="fyp-badges">
+                            <span class="badge badge-status fyp-live"><span class="pulse-dot" aria-hidden="true"></span>Ongoing</span>
+                            <span class="badge badge-status academic">Final Year Project</span>
+                            <span class="badge badge-date">Apr 2026 &ndash; Feb 2027</span>
+                        </div>
+                        <h3 class="project-title fyp-title">AI-Powered Anomaly Detection of Refrigerator Insulation</h3>
+                        <p class="fyp-sub">GIK Institute, Faculty of Mechanical Engineering &nbsp;&middot;&nbsp; Industrial partner: Pak Elektron Limited (PEL)</p>
+                        <div class="project-tech">
+                            <span class="tech-pill badge">EMAT Ultrasonics</span>
+                            <span class="tech-pill badge">NDT</span>
+                            <span class="tech-pill badge">SolidWorks</span>
+                            <span class="tech-pill badge">COMSOL</span>
+                            <span class="tech-pill badge">MATLAB / Simulink</span>
+                            <span class="tech-pill badge">Arduino</span>
+                            <span class="tech-pill badge">Anomaly Detection</span>
+                        </div>
                     </div>
 
-                    <h3 class="project-title heading-card ongoing-title">Design and Development of AI-Powered Anomaly Detection of Refrigerator Insulation</h3>
-
-                    <div class="project-tech">
-                        <span class="tech-pill badge">EMAT Ultrasonics</span>
-                        <span class="tech-pill badge">Lamb Waves</span>
-                        <span class="tech-pill badge">Data Acquisition</span>
-                        <span class="tech-pill badge">Scanner Design</span>
-                        <span class="tech-pill badge">SolidWorks</span>
-                        <span class="tech-pill badge">NDT</span>
-                    </div>
-
-                    <div class="ongoing-grid">
-                        <div class="ongoing-col">
-                            <h4 class="ongoing-subhead">Overview</h4>
-                            <p class="project-desc body-small">A non-destructive inspection system that finds defects in the polyurethane (PU) foam insulation of refrigerator cabinets. The project runs at the Faculty of Mechanical Engineering, GIK Institute, with industrial collaboration from Pak Elektron Limited (PEL). The scanner sends ultrasonic waves through the cabinet walls, and AI will flag anomalies such as foam debonding automatically.</p>
-
-                            <h4 class="ongoing-subhead">Approach</h4>
-                            <p class="project-desc body-small">Electromagnetic acoustic transducer (EMAT) probes excite guided ultrasonic waves in the cabinet&rsquo;s metal skin. The method builds on Yang et al. (2023), where debonding beneath the plate shows up as a loss of amplitude in the A0 Lamb wave mode.</p>
-                            <p class="project-desc body-small"><strong>Acquisition chain:</strong> EMAT probes on the metal plate &rarr; Sonemat HPP2000 pulser &rarr; power amplifier &rarr; DAQ card &rarr; oscilloscope.</p>
-
-                            <h4 class="ongoing-subhead">Scanner Designs</h4>
-                            <ul class="ongoing-list body-small">
-                                <li><strong>A4 sample scanner:</strong> a 2-DOF frame with one motorized axis and one manual axis, for scanning flat test samples.</li>
-                                <li><strong>Cabinet scanner:</strong> a U-shaped unit. On the PEL line it stays fixed below the cabinet as the cabinet moves from the curing station to the trolley. In the university lab it slides around a stationary cabinet.</li>
-                            </ul>
+                    <!-- Gallery + problem -->
+                    <div class="fyp-top">
+                        <div class="fyp-gallery">
+                            <button type="button" class="fyp-main project-image-wrapper" onclick="openFypGallery(2)" aria-label="Open A4 sample scanner CAD model">
+                                <img src="data/Projects/fyp-refrigerator-insulation/a4-scanner-cad.png" alt="CAD model of the A4 sample-scanning frame" class="fyp-main-img" loading="lazy">
+                                <span class="fyp-zoom"><i data-lucide="maximize-2" style="width: 16px; height: 16px;"></i></span>
+                            </button>
+                            <div class="fyp-thumbs">
+                                <button type="button" class="fyp-thumb" onclick="openFypGallery(0)" aria-label="Open project approach diagram"><img src="data/Projects/fyp-refrigerator-insulation/project-approach.png" alt="Two-stage project approach" loading="lazy"></button>
+                                <button type="button" class="fyp-thumb" onclick="openFypGallery(1)" aria-label="Open EMAT data-acquisition chain"><img src="data/Projects/fyp-refrigerator-insulation/emat-daq-chain.png" alt="EMAT data-acquisition chain" loading="lazy"></button>
+                                <button type="button" class="fyp-thumb" onclick="openFypGallery(3)" aria-label="Open cabinet scanner top view"><img src="data/Projects/fyp-refrigerator-insulation/cabinet-scanner-top.png" alt="U-shaped cabinet scanner, top view" loading="lazy"></button>
+                                <button type="button" class="fyp-thumb" onclick="openFypGallery(4)" aria-label="Open cabinet scanner 3D view"><img src="data/Projects/fyp-refrigerator-insulation/cabinet-scanner-iso.png" alt="U-shaped cabinet scanner around a cabinet" loading="lazy"></button>
+                            </div>
                         </div>
 
-                        <div class="ongoing-col">
-                            <h4 class="ongoing-subhead">Progress</h4>
-                            <ol class="ongoing-steps body-small">
-                                <li class="step done">
-                                    <span class="step-icon"><i data-lucide="check" style="width: 14px; height: 14px;"></i></span>
-                                    <div><strong>Data-acquisition setup</strong><span>Built</span></div>
-                                </li>
-                                <li class="step active">
-                                    <span class="step-icon"><i data-lucide="pen-tool" style="width: 14px; height: 14px;"></i></span>
-                                    <div><strong>Sample &amp; cabinet scanners</strong><span>CAD designed &middot; fabrication pending funding</span></div>
-                                </li>
-                                <li class="step">
-                                    <span class="step-icon"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i></span>
-                                    <div><strong>ML / DL anomaly detection</strong><span>Upcoming</span></div>
-                                </li>
+                        <div class="fyp-intro">
+                            <h4 class="fyp-label">The Problem</h4>
+                            <p class="fyp-text">Polyurethane (PU) foam insulates every refrigerator cabinet and sets its energy rating. Voids, debonding and density deviations are hidden once the cabinet is closed, and today&rsquo;s plant checks are periodic, slow or destructive. They sample the process instead of inspecting every cabinet.</p>
+
+                            <h4 class="fyp-label">The Goal</h4>
+                            <p class="fyp-text">An AI-driven, non-destructive inspection system that detects foam insulation anomalies during manufacturing, using EMAT ultrasonic scans together with process data from the foaming line.</p>
+
+                            <h4 class="fyp-label">Objectives</h4>
+                            <ol class="fyp-objectives">
+                                <li>Build a baseline dataset of normal foam through automated EMAT scanning and process monitoring.</li>
+                                <li>Extract statistical, thermodynamic and waveform markers of early-stage defects.</li>
+                                <li>Compare statistical and neural-network detectors for high accuracy at a low false-positive rate.</li>
+                                <li>Deploy the best model on an edge node with a real-time QC dashboard.</li>
                             </ol>
+                        </div>
+                    </div>
 
-                            <h4 class="ongoing-subhead">Team &middot; Group 11</h4>
-                            <p class="project-desc body-small">Aman Syed, Danish Shakil, Muhammad Saad</p>
+                    <!-- Detail tiles -->
+                    <div class="fyp-tiles">
+                        <div class="fyp-tile">
+                            <div class="fyp-tile-head"><i data-lucide="radio" style="width: 18px; height: 18px;"></i><h4>How It Works</h4></div>
+                            <p class="fyp-text">EMAT probes launch ultrasonic waves into the metal skin bonded to the foam, with no liquid couplant. Following Yang et al. (2023), debonding shows up as a loss of amplitude in the received A0 Lamb wave.</p>
+                            <div class="fyp-chain" aria-label="Acquisition chain">
+                                <span>PC + MATLAB</span><span>NI SCB-68A / DAQ</span><span>Sonemat HPP2000 pulser</span><span>Power amplifier</span><span>EMAT Tx &rarr; Rx</span><span>Oscilloscope</span>
+                            </div>
+                        </div>
 
-                            <h4 class="ongoing-subhead">Supervision</h4>
-                            <ul class="ongoing-list ongoing-plain body-small">
-                                <li><strong>Advisor:</strong> Dr. Arsalan Arif</li>
-                                <li><strong>Co-advisor:</strong> Dr. Shahid Alam</li>
-                                <li><strong>Industrial co-advisor:</strong> Mr. Mansoor Zaman, Head of QC/QA, PEL</li>
+                        <div class="fyp-tile">
+                            <div class="fyp-tile-head"><i data-lucide="scan-line" style="width: 18px; height: 18px;"></i><h4>Scanning Systems</h4></div>
+                            <p class="fyp-text"><strong>A4 sample scanner.</strong> A 2-DOF aluminium-extrusion frame with one stepper-driven axis and one manual axis. It scans 210 &times; 297 mm foam samples, 40&ndash;80 mm thick, with 45 mm probe spacing and 3 mm lift-off. It runs on an Arduino Uno with an IBT2 driver.</p>
+                            <p class="fyp-text"><strong>Cabinet scanner.</strong> A U-shaped unit with probes on its arms. On the PEL line it stays fixed while the cabinet moves over it from the curing station to the trolley. At the university it slides around a stationary cabinet.</p>
+                        </div>
+
+                        <div class="fyp-tile">
+                            <div class="fyp-tile-head"><i data-lucide="clipboard-check" style="width: 18px; height: 18px;"></i><h4>Work Done So Far</h4></div>
+                            <ul class="fyp-checks">
+                                <li>Literature review and research gap</li>
+                                <li>Industrial presentation and production-site visit at PEL</li>
+                                <li>Normal operating envelope defined from PEL foaming standards</li>
+                                <li>EMAT data-acquisition chain built, first signals captured</li>
+                                <li>COMSOL wave model of the foam specimen</li>
+                                <li>CAD designs of both scanners (fabrication pending funding)</li>
                             </ul>
                         </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="fyp-timeline-wrap">
+                        <h4 class="fyp-label">Project Timeline</h4>
+                        <ol class="fyp-timeline">
+                            <li class="is-done"><span class="fyp-dot"></span><span class="fyp-when">Apr&ndash;May 2026</span><strong>Research &amp; review</strong><em>Done</em></li>
+                            <li class="is-done"><span class="fyp-dot"></span><span class="fyp-when">May&ndash;Jun 2026</span><strong>System design</strong><em>Done</em></li>
+                            <li class="is-done"><span class="fyp-dot"></span><span class="fyp-when">Aug&ndash;Sep 2026</span><strong>DAQ setup &amp; scanner CAD</strong><em>Done</em></li>
+                            <li class="is-active"><span class="fyp-dot"></span><span class="fyp-when">Oct 2026</span><strong>Data collection &amp; field testing</strong><em>In progress</em></li>
+                            <li class="is-next"><span class="fyp-dot"></span><span class="fyp-when">Nov 2026</span><strong>Feature engineering &amp; model training</strong><em>Next up</em></li>
+                            <li><span class="fyp-dot"></span><span class="fyp-when">Dec 2026</span><strong>Review with PEL &amp; dashboard trial</strong><em>Planned</em></li>
+                            <li><span class="fyp-dot"></span><span class="fyp-when">Feb 2027</span><strong>Final report &amp; demo</strong><em>Planned</em></li>
+                        </ol>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="fyp-footer">
+                        <div class="fyp-people">
+                            <div>
+                                <h4 class="fyp-label">Team &middot; Group 11</h4>
+                                <p class="fyp-text">Aman Syed &middot; <strong>Danish Shakil</strong> &middot; Muhammad Saad</p>
+                            </div>
+                            <div>
+                                <h4 class="fyp-label">Supervision</h4>
+                                <p class="fyp-text">Dr. Arsalan Arif (Advisor, FME) &middot; Dr. Shahid Alam (Co-advisor, FEE) &middot; Mr. Mansoor Zaman (Industrial co-advisor, Head of QC/QA, PEL)</p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="openFypGallery(0)" class="btn btn-primary fyp-btn">View Images <i data-lucide="images" style="width: 16px; height: 16px;"></i></button>
                     </div>
                 </article>
             </div>
@@ -757,7 +806,7 @@
     <!-- Scripts -->
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=2" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/form.js" defer></script>
 </body>
