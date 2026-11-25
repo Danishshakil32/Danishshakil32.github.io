@@ -29,8 +29,8 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=10">
-    <link rel="stylesheet" href="css/animations.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/animations.css?v=11">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -237,27 +237,101 @@
             <div class="container">
                 <h2 id="industrial" class="heading-section reveal">Industrial Experience</h2>
                 <div class="projects-grid" style="margin-bottom: 6rem;">
-                    <article class="project-card interactive reveal">
-                        <div class="project-image-wrapper cursor-pointer"
-                            onclick="openModal(['data/Projects/Automated Tobacco Reclaimer System/page1_img1.png', 'data/Projects/Automated Tobacco Reclaimer System/page1_img2.png'], 'Automated Tobacco Reclaimer System')">
+                    <article class="project-card interactive reveal proj-expandable">
+                        <div class="project-image-wrapper cursor-pointer" onclick="openReclaimerGallery(0)">
                             <picture>
                                 <img src="data/Projects/Automated Tobacco Reclaimer System/page1_img1.png"
-                                    alt="Automated Tobacco Reclaimer System" class="project-image" loading="lazy">
+                                    alt="CAD model of the tobacco reclaimer with its airlift duct" class="project-image" loading="lazy">
                             </picture>
                         </div>
                         <div class="project-tech">
-                            <span class="tech-pill badge">BAT</span>
-                            <span class="tech-pill badge">Operations</span>
+                            <span class="tech-pill badge">PTC &middot; BAT</span>
+                            <span class="tech-pill badge">Machine Design</span>
                         </div>
                         <h3 class="project-title heading-card">Automated Tobacco Reclaimer</h3>
-                        <p class="project-desc body-small">Designed and mapped an automated tobacco reclaimer system
-                            aimed at optimizing primary production operations. Produced technical design reports and
-                            cross-departmental process flow diagrams.</p>
-                        <button
-                            onclick="openModal(['data/Projects/Automated Tobacco Reclaimer System/page1_img1.png', 'data/Projects/Automated Tobacco Reclaimer System/page1_img2.png'], 'Automated Tobacco Reclaimer System')"
-                            class="btn btn-primary" aria-label="View Details"
-                            style="margin-top: 10px; width: 100%;">View Images <i data-lucide="images"
-                                style="width: 16px; height: 16px;"></i></button>
+                        <p class="project-desc body-small">Designed a machine that recovers tobacco dust lost during
+                            cutting and handling so it can be reused in the Fibex line. It combines vibratory screening,
+                            centrifugal separation and pneumatic transport.</p>
+                        <p class="proj-sup body-small">Supervisor: <strong>Rooman Ahmad</strong>, Pakistan Tobacco Company</p>
+                        <div class="proj-actions">
+                            <button type="button" class="btn btn-secondary proj-btn-outline" onclick="toggleProjMore(this)" aria-expanded="false" aria-controls="reclaimer-more"><span>More Details</span> <i data-lucide="chevron-down" class="fyp-chev" style="width: 16px; height: 16px;"></i></button>
+                            <button type="button" class="btn btn-primary" onclick="openReclaimerGallery(0)">View Images <i data-lucide="images" style="width: 16px; height: 16px;"></i></button>
+                        </div>
+
+                        <div id="reclaimer-more" class="proj-more" hidden>
+                            <div class="proj-more-grid">
+                                <div>
+                                    <h4 class="fyp-label">Problem Statement</h4>
+                                    <p class="fyp-text">Cutting, handling and transporting brittle tobacco leaf breaks it down into dust and small particles, which is a direct loss of raw material. If isolated, these particles can be repurposed in fibre (Fibex) production. PTC needed a reclaimer that is efficient, low-cost, and can be built and assembled locally.</p>
+                                </div>
+                                <div>
+                                    <h4 class="fyp-label">Why It Matters</h4>
+                                    <ul class="fyp-checks">
+                                        <li>Turns a plant loss back into usable raw material</li>
+                                        <li>Low cost, built from off-the-shelf parts and local sheet metal</li>
+                                        <li>Fits into the existing production workflow</li>
+                                        <li>Vibration isolated to protect welds and reduce noise</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="fyp-label">Design Requirements</h4>
+                            <div class="proj-stats">
+                                <div><strong>&ge; 100 kg/hr</strong><span>Processing capacity</span></div>
+                                <div><strong>0.6 mm</strong><span>SS 304 Mesh 30 screen</span></div>
+                                <div><strong>3 bends</strong><span>Duct of 15 + 5 + 8.5 ft</span></div>
+                            </div>
+
+                            <h4 class="fyp-label">Hybrid Concept</h4>
+                            <ol class="proj-flow">
+                                <li><span>1</span><div><strong>Vibratory screening</strong><p>A K-8 pneumatic bin vibrator (24,500 VPM at 30 psi) shakes the SS 304 mesh so fine particles pass through without clogging.</p></div></li>
+                                <li><span>2</span><div><strong>Centrifugal separation</strong><p>A centre-driven spiral spins the material, separating usable particles from ultra-fine waste dust.</p></div></li>
+                                <li><span>3</span><div><strong>Pneumatic transport</strong><p>An airlift carries the reclaimed dust through a tangential duct and circular piping into a recovery box.</p></div></li>
+                            </ol>
+
+                            <h4 class="fyp-label">Engineering Analysis</h4>
+                            <div class="proj-stats proj-stats-dark">
+                                <div><strong>377.19 Pa</strong><span>System pressure loss</span></div>
+                                <div><strong>50.85 W</strong><span>Required motor power</span></div>
+                                <div><strong>0.135 m&sup3;/s</strong><span>Volumetric flow rate</span></div>
+                            </div>
+                            <p class="fyp-note">Equivalent length 14.4 m &middot; Re = 1.72 &times; 10<sup>5</sup> &middot; Friction factor 0.016 &middot; Solid-to-air ratio 0.18</p>
+
+                            <h4 class="fyp-label">Manufacturing Plan</h4>
+                            <div class="proj-table-wrap">
+                                <table class="proj-table">
+                                    <thead><tr><th>Component</th><th>Sourcing</th><th>Details</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Screening mesh</td><td>Buy</td><td>SS 304, Mesh 30 (~0.6 mm), cut 25 &times; 25 in</td></tr>
+                                        <tr><td>Centrifugal spiral</td><td>Make locally</td><td>Sheet metal formed and rolled to the CAD geometry</td></tr>
+                                        <tr><td>Recovery box</td><td>Buy or make</td><td>Off-the-shelf container or local sheet metal</td></tr>
+                                        <tr><td>Bin vibrator K-8</td><td>Buy</td><td>Standard commercial pneumatic unit</td></tr>
+                                        <tr><td>Spiral drive motor</td><td>Buy</td><td>Standard commercial industrial motor</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="proj-more-grid">
+                                <div>
+                                    <h4 class="fyp-label">My Role</h4>
+                                    <ul class="fyp-checks">
+                                        <li>Turned a plant loss into clear design targets</li>
+                                        <li>Compared three separation concepts and combined them</li>
+                                        <li>Modelled the mesh, spiral, recovery box and duct in 3D CAD</li>
+                                        <li>Sized the system by calculation and selected standard parts</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="fyp-label">Challenges</h4>
+                                    <ul class="proj-bullets">
+                                        <li>Meeting 100 kg/hr at low cost</li>
+                                        <li>Keeping the duct to 3 bends to limit pressure drop</li>
+                                        <li>Isolating vibration from the frame and welds</li>
+                                        <li>Designing around locally available parts and fabrication</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </article>
                     <article class="project-card interactive reveal">
                         <div class="project-image-wrapper cursor-pointer"
@@ -732,7 +806,7 @@
     <!-- Scripts -->
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="js/main.js?v=10" defer></script>
+    <script src="js/main.js?v=11" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/form.js" defer></script>
     <!-- GoatCounter: private visit stats at https://danishshakil.goatcounter.com -->

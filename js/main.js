@@ -184,3 +184,30 @@ window.toggleFypMore = function () {
     document.addEventListener('click', (e) => { if (!dd.contains(e.target)) setOpen(false); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setOpen(false); } });
 })();
+
+// Generic "More Details" toggle for project cards
+window.toggleProjMore = function (btn) {
+    const card = btn.closest('.project-card');
+    const panel = card && card.querySelector('.proj-more');
+    if (!panel) return;
+    const open = panel.hidden;
+    panel.hidden = !open;
+    card.classList.toggle('is-expanded', open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('span').textContent = open ? 'Less Details' : 'More Details';
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+// Tobacco reclaimer gallery (shared image modal, per-image captions)
+window.openReclaimerGallery = function (startIndex) {
+    const dir = 'data/Projects/Automated Tobacco Reclaimer System/';
+    const items = [
+        ['page1_img1.png', 'Reclaimer assembly with the airlift duct (15 + 5 + 8.5 ft, 3 bends)'],
+        ['recovery-box.jpg', 'Recovery box with the mesh and spiral on top and the tangential outlet duct'],
+        ['page1_img2.png', 'Centre-driven centrifugal spiral, braced to the box walls'],
+        ['mesh-vibrator.png', 'SS 304 Mesh 30 screen with the K-8 bin vibrator at its centre']
+    ];
+    window.openModal(items.map(i => dir + i[0]), items.map(i => i[1]));
+    window.currentModalIndex = startIndex || 0;
+    window.updateModalView();
+};
